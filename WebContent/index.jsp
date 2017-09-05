@@ -6,11 +6,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 </head>
-<body>
-	<div>
-		<h1 align="center">个人首页</h1>
-	
-	</div>
 
-</body>
+<frameset cols="200,*">
+	<frame src="html\xianxi1.html">
+	<frame src="html\2.html" name="秀逗">
+
+</frameset>
 </html>
