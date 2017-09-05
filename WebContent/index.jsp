@@ -8,8 +8,11 @@
 </head>
 
 <frameset cols="200,*">
-	<frame src="html\xianxi1.html">
-	<frame src="html\2.html" name="秀逗">
+	<frame src="html\xianxi1.html" name="you">
+<frameset rows="200,*">
+	<frame src="">
+	<frame src="" name="left">
+</frameset>
 
 </frameset>
 </html>
