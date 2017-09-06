@@ -1,1 +1,4 @@
 @CHARSET "UTF-8";
+@IMPORT url("div.css");
+@IMPORT url("p.css");
+@IMPORT url("span.css");
