@@ -10,7 +10,7 @@
 <frameset cols="200,*">
 	<frame src="html\xianxi1.html" name="you">
 <frameset rows="200,*">
-	<frame src="">
+	<frame src="html\window.html" name="shang">
 	<frame src="html\hc.html" name="left">
 </frameset>
 

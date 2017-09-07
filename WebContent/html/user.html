@@ -5,6 +5,51 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<table>
+		<tr>
+			<th>操作</th>
+			<th>编号</th>
+			<th>姓名</th>
+		</tr>
+		<tr>
+			<td>
+				<input type="button" value="选择" onclick="che('二球','帅哥')"/>
+			</td>
+			<td>二球</td>
+			<td>帅哥</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="button" value="选择" onclick="che('002','赵四')"/>
+			</td>
+			<td>002</td>
+			<td>赵四</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="button" value="选择" onclick="che('003','王五')"/>
+			</td>
+			<td>003</td>
+			<td>王五</td>
+		</tr>
+	
+	</table>
+	<script type="text/javascript">
+	/*
+		把获取的用户编号和用户名赋值到window。html的文本框中
+		再把当前的窗口关闭
+	
+	*/
+	function che(id,name) {
+		//创建窗口的引用
+		var parentwindow=window.opener;
+		parentwindow.document.getElementById("num").value=id;
+		parentwindow.document.getElementById("name").value=name;
+		//两秒之后关闭当前窗口
+		window.setTimeout('window.close()', 500);
+		
+	}
 
+</script>
 </body>
 </html>
