@@ -22,7 +22,31 @@
    		p容器下显示,怎么回事
    		<span>span下显示</span>
    	</p>
+<script type="text/javascript">
+document.write("<table border='1' width='200px' cellpadding='5'>");
+for (var x = 1; x <=9; x++) {
+	document.write("<tr>");
 
+for (var y = 1; y <=x; y++) {
+	document.write("<td>"+y+"*"+x+"="+y*x+"</td>")
+	
+}
+document.write("</tr>")
+}
+document.write("</table>");
+//全局和局部的概念
+var x=4;
+function show(x) {
+	x=8;
+	
+}
+show(x);
+document.write("x="+x);
+
+
+
+</script>
 
 </body>
+<script type="text/javascript" src="http://localhost:8080/tomcattest2/js/1.js"></script>
 </html>
