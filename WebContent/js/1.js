@@ -60,14 +60,18 @@ document.write("<br>"+"su="+su+"<br>");
 			document.write(result);
 	
 		}
-		var su=[3,4,5];
-		var type=[6,7,8];
-		document.write(su);
-
+		var add=["zhao","tian","lin"];
+		document.write(add.join("-")+"<br>");
+		document.write(add.pop());
+		
 //js date时间对象
-		var date=new getTime();
-		document.write(date);
-		
-		
-		
+		var date=new Date();
+		document.write(date+"<br>");
+		document.write(date.toLocaleString()+"<br>");
+		document.write(date.toLocaleDateString()+"<br>");
+		document.write(date.getDay()+"<br>")
+		document.write(date.getFullYear()+"<br>")
+		document.write(date.getHours()+"<br>");
+		document.write(date.getMonth()+1+"<br>")
+		document.write(date.getDate()+"<br>");
 		
