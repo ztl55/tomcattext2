@@ -74,4 +74,8 @@ document.write("<br>"+"su="+su+"<br>");
 		document.write(date.getHours()+"<br>");
 		document.write(date.getMonth()+1+"<br>")
 		document.write(date.getDate()+"<br>");
+	
+	function run() {
+		alert(window.navigator.userAgent);
 		
+	}

@@ -49,4 +49,13 @@ if (i<10)
   return i
 }
 */
+var str="visit W3school";
+var pattl=/W3school/;
+	if (pattl.test(str)) {
+	var result="验证通过";
+	}
+	else {
+		var result="验证不通过";
+	}
+	document.write(result);
 
