@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="../css/country.css"?>
+<country>
+	<china>中国</china>
+	<england>英国</england>
+	<usa>美国</usa>
+	<japan>唐朝</japan>
+</country>
