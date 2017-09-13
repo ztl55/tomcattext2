@@ -5,14 +5,72 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<input type="text" id="nameid" value="zhangsan"/><br>
+	<input type="text" id="nameid" value="张三"/><br>
 	<input type="text" name="name1" value="李四"/><br>
 	<input type="text" name="name1" value="王五"/><br>
-
+	<ul id="ulid">
+		<li>玩笑</li>
+		<li>开玩笑</li>
+		<li>咋地啊</li>
+	
+	</ul>
+	<ul>
+		<li>不能太随意</li>
+		<li>做好</li>
+		<li>玩玩</li>
+	
+	</ul>
 </body>
 	<script type="text/javascript">
-		var input=document.getElementById("nameid");
-		alert(input);
+		var inpu=document.getElementById("nameid");
+		document.write(inpu.value+"<br>");
+		document.write(inpu.nodeName);
+		document.write(inpu.nodeType);
+		document.write(inpu.nodeValue);
+		var inpus =document.getElementsByName("name1");
+		document.write(inpus.length+"<br>");
+		var inputs=document.getElementsByTagName("input");
+		for (var i = 0; i < inputs.length; i++) {
+			 var inputs1=inputs[i];
+			document.write(inputs1.value);
+		}
+		/*  
+			获取元素对象
+				getAttribute("属性名称"); 获取属性的值
+				setAttribute("属性名称","属性的值"); 设置或者修改属性的值
+				removeAttribute("属性名称");  删除属性
+				
+			获取元素下的所有子节点*****
+				ul.getElementsByTagName();
+		*/
+		
+		var input3=document.getElementById("nameid");
+		//获取属性的值
+		document.write("<br>"+input3.getAttribute("value"));
+		//修改
+		input3.setAttribute("value", "赵五");
+		document.write("<br>"+input3.getAttribute("value"));
+		//删除属性
+		input3.removeAttribute("value");
+		//alert(input3.getAttribute("value"));
+		/*  
+			需求：在ul无序列表下，添加一个子节点<li>深圳</li>
+		*/
+		//创建元素对象
+		var li=document.createElement("li");
+		//创建文本对象
+		var text=document.createTextNode("深圳");
+		//把文本对象添加到元素对象下面，作为子节点
+		li.appendChild(text);
+		//获取ul
+		var ul=document.getElementsByTagName("ul")[1];
+		//把元素对象添加ul的下面，作为子节点
+		ul.appendChild(li);
+		
+		var ss=document.getElementById("ulid");
+		var lis2 = ul.getElementsByTagName("li");
+		alert(lis2.length);
+		
 	</script>
 	
 </html>
