@@ -6,13 +6,83 @@
 </head>
 <body>
 	<input type="checkbox" id="boxid" onclick="selorno()"/>全选/全不选<br>
-	<input type="checkbox" name="lave"/>青铜<br>
-	<input type="checkbox" name="lave"/>白银<br>
-	<input type="checkbox" name="lave"/>黄金<br>
-	<input type="checkbox" name="lave"/>王者<br>
+	<input type="checkbox" name="lave" onclick="seldan()" />青铜<br>
+	<input type="checkbox" name="lave" onclick="seldan()"/>白银<br>
+	<input type="checkbox" name="lave" onclick="seldan()"/>黄金<br>
+	<input type="checkbox" name="lave" onclick="seldan()"/>王者<br>
 	<input type="button" value="全选" onclick="selall()"/>
 	<input type="button" value="全不选" onclick="selno()"/>
 	<input type="button" value="反选" onclick="seloth()"/>
 
 </body>
+	<script type="text/javascript">
+		//全选
+		function selall() {
+			//获取名称是love的所有的input的标签，返回的是数组
+			var quanbu=document.getElementsByName("lave");
+			for (var i = 0; i < quanbu.length; i++) {
+				//获取每个checkbox
+				var input=quanbu[i];
+				//调用checked属性
+				input.checked=true;		
+			}	
+		}
+		//全不选
+		function selno() {
+			//获取名称是love的所有的input的标签，返回的是数组
+			var quanbu=document.getElementsByName("lave");
+			for (var i = 0; i < quanbu.length; i++) {
+				//获取每个checkbox
+				var input=quanbu[i];
+				//调用checked属性
+				input.checked=false;		
+			}	
+		}
+		//反选
+		function seloth() {
+			//获取名称是love的所有的input的标签，返回的是数组
+			var quanbu=document.getElementsByName("lave");
+			for (var i = 0; i < quanbu.length; i++) {
+				//获取每个checkbox
+				var input=quanbu[i];
+				//调用checked属性
+				if (input.checked==true) {
+					
+					input.checked=false;
+				}else {
+					input.checked=true;
+
+				}		
+			}	
+		} 
+		//全选全不选
+		function selorno() {
+			var quanxuan=document.getElementById("boxid");
+			if (quanxuan.checked==false) {
+				selno();
+			}else {
+				selall()
+			} 
+
+		}
+		//有一个复选框全部选中，全选也选中，复选框有一个没选中，全选不在选中
+		function seldan() {
+			var quanbu=document.getElementsByName("lave");
+			var quanxuan=document.getElementById("boxid");
+			for (var i = 0; i < quanbu.length; i++) {
+				//获取每个checkbox
+				var input=quanbu[i];
+				//调用checked属性
+				if (input.checked==true) {
+					
+					quanxuan.checked=true;
+				}else {
+					quanxuan.checked=false;
+
+				}		
+			}
+		}
+	
+	
+	</script>
 </html>
