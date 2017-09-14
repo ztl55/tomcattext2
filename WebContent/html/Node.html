@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<input type="text" id="nameId" value="zhangsan" />
+	<ul id="ulid">
+		<li id="liid" onclick="run()">北京</li>
+		<li>上海</li>
+		<li>广州</li>
+	</ul>
+	<ul id="ulid">
+		<li>赵</li>
+		<li id="liid2">钱</li>
+		<li>孙</li>
+	</ul>
+	<button id="btnid" onclick="fuzhi()">
+	这是个按钮
+	</button>
+	<span id="spanid">
+	</span>
+
+</body>
+	<script type="text/javascript">
+	/* 
+	元素				属性				文本
+nodeName		大写的标签名称		属性名称			#text
+nodeType		1				2				3
+nodeValue		null			属性的值			文本的内容
+
+* parentNode		获取父节点
+* childNodes		所有子节点
+* firstChild		第一个子节点
+* lastChild			最后一个子节点
+* nextSibling		下一个兄弟节点
+* previousSibling	上一个兄弟节点
+
+* appendChild(node)			父节点调用，在末尾添加子节点
+* insertBefore(new,old)		父节点调用，在指定节点之前添加子节点
+* replaceChild(new,old)		父节点调用，替换节点
+* removeChild(node)			父节点调用,删除节点
+
+* cloneNode(boolean)		不是父节点调用,复制节点
+* boolean	：如果是true，复制子节点
+	：如果是false，不复制子节点，默认是false  */
+	
+		 var input=document.getElementById("nameId");
+		/*document.write(input.nodeName);
+		document.write(input.nodeType);
+		document.write(input.nodeValue);
+	 */
+	 var arr=input.getAttributeNode("type");
+	 document.write(arr.nodeName);
+	 document.write(arr.nodeType);
+	 document.write(arr.nodeValue);
+	/*  var span=document.getElementById("spanId");
+	 var text=span.firstChild;
+	 document.write(text.nodeName);
+	 document.write(text.nodeType);
+	 document.write(text.nodeValue); */
+	 var ul = document.getElementById("ulid");
+	 //把文对对象装换成元素对象
+	 var li=ul.firstElementChild;
+	 document.write(li.nodeType);
+	 //验证是否包含子节点
+	 document.write(ul.hasChildNodes());
+	 //验证是否包含属性
+	 document.write(ul.hasAttributes());
+	 
+	 //点击事件替换文字
+	 //创建匿名函数
+/* 	 document.getElementById("liid").onclick=function(){
+		var liid=document.getElementById("liid");
+		 var liid2=document.getElementById("liid2");
+		 var ul=liid.parentNode;
+		 ul.replaceChild(liid2, liid);
+		 
+		 var ul=this.parentNode;
+		 var liid2=document.getElementById("liid2");
+		 ul.replaceChild(liid2,this);
+	 
+	 }; */
+	 //删除节点
+	 function run(){
+		 
+		//this.parentNode.removeChild(this);
+		var liid=document.getElementById("liid");
+		var ul=liid.parentNode;
+		ul.removeChild(liid);
+			
+	}
+	 //复制button的按钮，添加到span标签的中间
+	 function fuzhi() {
+		
+	 var btn=document.getElementById("btnid");
+	 var newbtn=btn.cloneNode(true);
+	 var span=document.getElementById("spanid");
+	 span.appendChild(newbtn);
+	 
+	 }
+	 
+	</script>
+</html>
+
