@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<input type="text" id="text1" onmousemove="run()" onmouseout="run2()"/><span id="span1"></span><br/>
+	<input type="text" id="text2" onkeyup="run3()" style="width: 300px;"/><br/>
+	
+	<div id="div1" style="width: 200px;display: none;">
+		<table>
+			<tr>
+				<td>html</td>
+			</tr>
+			<tr>
+				<td>css</td>
+			</tr>
+			<tr>
+				<td>js</td>
+			</tr>
+		
+		</table>
+	
+	</div>
+	
+</body>
+	<script type="text/javascript">
+		function run() {
+			var test1=document.getElementById("text1")
+			test1.style.backgroundColor="red";
+		}
+		function run2() {
+			var span1=document.getElementById("span1")
+			span1.innerHTML="请输入账号";			
+		}
+		function run3() {
+			var div1=document.getElementById("div1")
+			div1.style.display="block";
+			
+		}
+		
+	
+	
+	</script>
+</html>

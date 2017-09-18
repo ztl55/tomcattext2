@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<script type="text/javascript">
+		//姓名格式提示
+		function run1() {
+			var uspan=document.getElementById("uspan");
+			uspan.innerHTML="不能输入特殊字符"
+			return false;
+			
+		}
+		//表单验证，必须有返回值
+		function run() {
+			//校验姓名
+			var name=document.getElementById("nameid").value;
+			if (name=="" || name.length==0) {
+				var uspan=document.getElementById("uspan");
+				uspan.innerHTML="用户名不能为空";
+				return false;
+			}
+			//校验密码
+			var pwd=document.getElementById("pwdid").value;
+			if (pwd=="" || pwd.length<6) {
+				var pspan=document.getElementById("pspan");
+				pspan.innerHTML="密码至少6位";
+				return false;
+			
+			}else {
+				pspan.innerHTML="";
+			}
+			//确认密码
+			var repwdid=document.getElementById("repwdid").value;
+			if (pwd!=repwdid) {
+				var rpspan=document.getElementById("rpspan");
+				rpspan.innerHTML="两次密码不一致";
+				return false;
+			}
+			
+			//校验邮箱
+			var emailid=document.getElementById("emailid").value;
+			if (!/^[\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*@(?:[\w](?:[\w-]*[\w])?\.)+[\w](?:[\w-]*[\w])?$/.test(emailid)) {
+				var espan=document.getElementById("espan");
+				espan.innerHTML="邮箱格式不正确";
+				return false;
+			}
+			
+			}
+	/* 	function run2() {
+			//通过id获取form
+			//var form=document.getElementById("formId");
+			//通过form的name属性获取表单
+			var form=document.form1;
+			if (form==run()) {
+				
+			
+			//设置提交的路径
+			form.action="Node.html";
+			form.method="get";
+			form.submit();
+			}
+		} */
+	
+	</script>
+</head>
+<body>
+	<form id="formId" name="form1" action="Node.html" method="get" onsubmit="return run()">
+		<table border="1" width="60%">
+			<tr>
+				<td>输入姓名</td>
+				<td>
+					<input type="text" name="uesrname" id="nameid" onfocus="run1()"/><span id="uspan"></span>
+				</td>
+			</tr>
+			<tr>
+				<td>输入密码</td>
+				<td>
+					<input type="password" name="password" id="pwdid"/><span id="pspan"></span>
+				</td>
+			</tr>
+			<tr>
+				<td>确定密码</td>
+				<td>
+					<input type="password" name="repassword" id="repwdid"/><span id="rpspan"></span>
+				</td>
+			</tr>
+			<tr>
+				<td>输入邮箱</td>
+				<td>
+					<input type="text" name="email" id="emailid"/><span id="espan"></span>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="reset" name="rs"/>
+				</td>
+				<td>
+					<input type="submit" value="注册" onclick="run2()">
+				</td>
+			</tr>
+		
+		</table>
+	
+	
+	
+	</form>
+
+</body>
+</html>

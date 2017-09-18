@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<span id="span1">
+		这是一个span区域
+	</span>
+	<span id="span2">
+	</span>
+	<h3>获取焦点事件</h3>
+	
+	输入姓名：<input type="text" name="username" onfocus="run()" onblur="run2()"/><span id="span3"></span><br/>
+	输入密码：<input type="password" name="password"/><span span id="psspan"></span>
+</body>
+	<script type="text/javascript">
+	/* 
+		*innerHTML属性：
+			*获取文本内容
+			*设置文本内容
+			
+		*事件:
+			onclick   点击事件
+			onload    加载事件
+			onfocus   获取焦点事件
+			onblur    失去焦点事件
+			
+	
+	*/
+		var span=document.getElementById("span1");
+		//document.write(span.innerHTML);
+		var span2=document.getElementById("span2")
+		span2.innerHTML="<font color='red'>只是span2的区域</font>";
+		//输入提示信息
+		function run() {
+			var span3=document.getElementById("span3")
+			span3.innerHTML="你只能输入特殊字符";
+		
+			
+		}
+		//失去焦点事件
+		function run2() {
+			var span3=document.getElementById("span3");
+			span3.innerHTML="用户名已存在";
+			
+		}
+		
+			
+		
+		
+	
+	</script>
+</html>
