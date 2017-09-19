@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/css" href="../css/country.css"?>
+<!-- <?xml-stylesheet type="text/css" href="../css/country.css"?> -->
 <country>
 	<china>中国</china>
 	<england>英国</england>
 	<usa>美国</usa>
 	<japan>唐朝</japan>
+	<书名> javaweb开发大全</书名>
 </country>
