@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+	*引入W3C名称空间，我是实例文档
+		*xmlns="http://www.w3.org/2001/XMLSchema-instance"
+	*引入自己编写的schema的文档
+	*问题：元素不能有两天的属性名称
+		*解决：起别名     	：aa
+		*技巧:
+
+ -->
+
+<书架 xmlns:aa="http://www.w3.org/2001/XMLSchema-instance" xmlns="">
+	<书>
+		<书名>javaweb开发大全</书名>
+		<作者>班长</作者>
+		<售价>99.6</售价>
+		<简介>资源很全面</简介>
+	</书>
+</书架>
