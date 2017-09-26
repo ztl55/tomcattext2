@@ -7,6 +7,7 @@ import org.dom4j.Document;
 import org.dom4j.DocumentException;
 import org.dom4j.DocumentHelper;
 import org.dom4j.Element;
+import org.dom4j.Node;
 import org.dom4j.io.OutputFormat;
 import org.dom4j.io.SAXReader;
 import org.dom4j.io.XMLWriter;
@@ -19,12 +20,26 @@ public class Dom4jTest {
 	
 	public static void main(String[] args) {
 		try {
-			run5();
+			run6();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		
 	}
+	/**
+	 * XPATH的支持
+	 * @throws Exception
+	 */
+	public static void run6() throws Exception{
+		
+		SAXReader reader=new SAXReader();
+		Document document=reader.read("WebContent/xml/book2.xml");
+		//List<Node> list=document.selectNodes("/书架/书/作者");
+		List<Node> list=document.selectNodes("//作者");
+		Node author2=list.get(1);
+		System.out.println(author2.getText());
+	}
+
 	/**
 	 * 删除子节点
 	 */
@@ -62,7 +77,7 @@ public class Dom4jTest {
 		Element root=document.getRootElement();
 		//获取标签的节点
 		Element book2=(Element) root.elements("书").get(1);
-		Element dog=book2.element("新的");
+		Element dog=(Element) book2.elements("新的").get(1);
 		dog.setText("小猫");
 		//回写
 		OutputFormat format=OutputFormat.createPrettyPrint();
