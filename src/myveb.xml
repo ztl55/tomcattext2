@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+	<servlet>
+		<servlet-name>HelloServler</servlet-name>
+		<servlet-class>com.itcast.servlet.HelloServlet</servlet-class>
+	
+	</servlet>
+
+
+</web-app>
